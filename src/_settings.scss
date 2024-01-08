@@ -1,0 +1,54 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../src/assets/fonts/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+$font-1: "Montesserat", sans-sherif;
+
+$color-black: #000;
+$color-white: #fff;
+$color-orange: #ff6060;
+$color-background: #f6f6f6;
+
+* {
+  /* Works on Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: $color-orange $color-background;
+
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: $color-background;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-orange;
+      border-radius: 20px;
+      // border: 4px solid $color-background;
+    }
+  }
+
+body {
+  background: $color-white;
+  font-family: Monteserrat;
+  // @include verticalCenter;
+}
+li {
+  list-style-type: none;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px;
+  margin: 50px auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  gap: 40px;
+}

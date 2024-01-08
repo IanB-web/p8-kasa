@@ -1,0 +1,14 @@
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:50px;
+    background-color: $color-background;
+    border-radius: 25px;
+    
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap:30px;
+    }
+}

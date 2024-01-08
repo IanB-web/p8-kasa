@@ -1,0 +1,20 @@
+@import "./styles/vendor/normalize";
+
+@import "./_settings.scss";
+
+@import "./styles/utils/keyframes";
+@import "./styles/utils/mixins";
+@import "./styles/utils/variables";
+
+@import "./components/Header/header";
+@import "./components/Header/logo/Logo";
+@import "./components/Header/Navigation/Navigation";
+
+@import "./components/Footer/footer";
+
+@import "./components/Banner/banner";
+
+@import "./components/Gallery/Gallery.scss";
+@import "./components/Gallery/thumb/Thumb.scss"
+
+

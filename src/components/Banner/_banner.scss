@@ -1,0 +1,24 @@
+.banner {
+  @include verticalCenter;
+  height: 180px;
+  border-radius: 25px;
+  padding: 5px 0;
+
+  background-color: black;
+
+  position: relative;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    mix-blend-mode: lighten;
+    opacity: 0.6;
+  }
+  h1 {
+    color: $color-white;
+    z-index: 1;
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+  }
+}
