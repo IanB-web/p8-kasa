@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding:50px;
+    padding: 50px;
     background-color: $color-background;
     border-radius: 25px;
-    
+
     ul {
         display: flex;
         flex-wrap: wrap;
-        gap:30px;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0;
+        gap: 40px;
     }
 }
