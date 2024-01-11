@@ -4,11 +4,12 @@ import axios from "axios";
 
 const Gallery = () => {
 
+
   const [galleryData, setGalleryData] = useState([]);
 
   const getData = () => {
     axios
-      .get("http://localhost:3004/logements")
+      .get("/logements.json")
       .then((res) => setGalleryData(res.data));
   };
 
@@ -17,8 +18,7 @@ const Gallery = () => {
   return (
     <div className="gallery">
       <ul>
-        {galleryData
-        .map((logement) => (
+        {galleryData.map((logement) => (
           <Thumb key={logement.id} logement={logement} />
         ))}
       </ul>
