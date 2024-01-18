@@ -10,12 +10,12 @@ const Rating = ({ rating }) => {
     if (i <= rating) {
       // Tant que i est inférieur ou égal à la note on injecte des étoiles pleines
       stars.push(
-        <img className="Stars" key={i} src={activeStar} alt="star-filled" />
+        <img className="stars" key={i} src={activeStar} alt="star-filled" />
       );
     } else {
       // Sinon on injecte une étoile vide
       stars.push(
-        <img className="Stars" key={i} src={inactiveStar} alt="star-empty" />
+        <img className="stars" key={i} src={inactiveStar} alt="star-empty" />
       );
     }
   }

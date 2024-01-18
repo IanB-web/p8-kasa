@@ -1,12 +1,19 @@
 .logement {
-margin: 50px;
-.logement__info {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    flex-direction: column;
+    margin: 50px;
+    gap:20px;
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
 }
-}
+
+
 .logement__intro {
     display: flex;
     flex-direction: column;
@@ -27,8 +34,13 @@ margin: 50px;
 
 .host {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+
+    &__info {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
 
     &__name {
         color: #ff6060;
@@ -52,9 +64,9 @@ margin: 50px;
 .tags {
     display: flex;
     flex-direction: row;
-    gap: 20px;
     width: fit-content;
     color: $color-white;
+    flex-wrap: wrap;
 
     .tag {
         height: fit-content;
@@ -63,6 +75,7 @@ margin: 50px;
         padding: 5px 20px;
         border-radius: 10px;
         font-size: 12px;
+        margin:6px;
     }
 }
 
@@ -70,9 +83,10 @@ margin: 50px;
     display: flex;
     justify-content: space-between;
     margin: auto;
-.menu__box {
-    width: 45%;
-}
+    width: 100%;
+    .menu__box {
+        width: 45%;
+    }
 
     .menu__txt {
         ul {
@@ -80,4 +94,9 @@ margin: 50px;
             padding: 0;
         }
     }
+}
+
+.rating{
+    display: flex;
+    justify-content: space-between;
 }

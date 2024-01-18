@@ -56,7 +56,6 @@ const Logement = () => {
     <>
       <Header />
       <div className="logement">
-
         <div className="logement__info">
           <div className="logement__intro">
             <h1 className="logement__title">{logement.title} </h1>
@@ -68,13 +67,15 @@ const Logement = () => {
             </div>
           </div>
           <div className="host">
-            <p className="host__name">{logement.host.name}</p>
-            <img
-              src={logement.host.picture}
-              alt=""
-              className="host__portrait"
-            />
-            <Rating rating={logement.rating}/>
+            <div className="host__info">
+              <p className="host__name">{logement.host.name}</p>
+              <img
+                src={logement.host.picture}
+                alt=""
+                className="host__portrait"
+              />
+            </div>
+            <Rating rating={logement.rating} />
           </div>
         </div>
 
@@ -94,7 +95,6 @@ const Logement = () => {
             </div>
           </Dropdown>
         </div>
-
       </div>
       <Footer />
     </>
