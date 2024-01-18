@@ -7,6 +7,4 @@ Afin de pouvoir visualiser et travailler avecv toutes les donnes, voici les comm
 ```
     npm run dev    => lance l'écoute en temps réel du projet pour avoir le rendu
 
-    npm run server   ==>> lance le serveur afin de pouvoir récupérer les differents logements et les utiliser dans le projet
-
 ```
