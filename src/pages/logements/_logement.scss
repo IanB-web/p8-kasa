@@ -1,0 +1,83 @@
+.logement {
+margin: 50px;
+.logement__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+}
+.logement__intro {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    color: #ff6060;
+    font-family: Montserrat;
+    font-weight: 500;
+
+    h1 {
+        margin: 0;
+        font-size: 32px;
+    }
+    span {
+        font-size: 17px;
+    }
+}
+
+.host {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    &__name {
+        color: #ff6060;
+        text-align: right;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        width: 120px;
+        margin: auto;
+    }
+
+    &__portrait {
+        background-color: $color-background;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: contain;
+    }
+}
+
+.tags {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: fit-content;
+    color: $color-white;
+
+    .tag {
+        height: fit-content;
+        width: fit-content;
+        background-color: $color-orange;
+        padding: 5px 20px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+}
+
+.logement__dropdown {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+.menu__box {
+    width: 45%;
+}
+
+    .menu__txt {
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

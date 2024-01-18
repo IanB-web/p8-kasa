@@ -1,54 +1,104 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
-import axios from "axios";
-
 import Header from "../../components/Header/Header";
 import Footer from "../../components/footer/Footer";
 import Error from "../../components/error/Error";
+import Dropdown from "../../components/dropdown/Dropdown";
+import Rating from "../../components/rating/Rating";
 
-const Logements = () => {
+const Logement = () => {
   const { id } = useParams();
 
-  const [isLoading, setIsLoading] = useState(true);
   const [logement, setLogement] = useState();
+  const [isLoading, setIsLoading] = useState(true);
   const [isError404, setIsError404] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const handleClick = (event) => {
+    // 👇️ toggle isActive state on click
+    setIsActive((current) => !current);
+  };
 
   useEffect(() => {
-    // Récupérer le logement qui correspond à l'id et le mettre dans un state
-    axios.get("/logements.jsx").then((res) => {
-      if (true) {
-        // On trouve le bon logement
-        setLogement({});
-      } else {
-        // Le logement n'existe pas pour l'id donné en url
-        setIsError404(true);
-      }
-      setIsLoading(false);
-    });
-  }, []);
+    fetch("/logements.json")
+      .then((response) => {
+        return response.json(); // Retourner le contenu de la réponse
+      })
+      .then((logements) => {
+        // Récupérer le logement qui correspond à l'id et le mettre dans un state
+        const result = logements.find((logement) => logement.id === id);
+        if (result === undefined) {
+          setIsError404(true);
+        }
+        setLogement(result);
+      })
+      .catch((err) => {
+        setIsError(true);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, [id]);
 
-  if (isLoading) {
-    return <p>chargement en cours..</p>;
+  if (isLoading) return <p>Chargement en cours</p>;
+
+  if (isError) {
+    return <p>une erreur est survenue</p>;
   }
 
   if (isError404) {
-    return (
-      <>
-        <Error />
-      </>
-    );
+    return <Error />;
   }
 
   return (
     <>
       <Header />
-      <div>
-        <p>{logement.title}</p>
+      <div className="logement">
+
+        <div className="logement__info">
+          <div className="logement__intro">
+            <h1 className="logement__title">{logement.title} </h1>
+            <span className="logement__location">{logement.location}</span>
+            <div className="tags">
+              {logement.tags.map((tag) => (
+                <p className="tag">{tag}</p>
+              ))}
+            </div>
+          </div>
+          <div className="host">
+            <p className="host__name">{logement.host.name}</p>
+            <img
+              src={logement.host.picture}
+              alt=""
+              className="host__portrait"
+            />
+            <Rating rating={logement.rating}/>
+          </div>
+        </div>
+
+        <div className="logement__dropdown">
+          <Dropdown title="Description">
+            <p className="menu__txt" onClick={handleClick}>
+              {logement.description}
+            </p>
+          </Dropdown>
+          <Dropdown title="Équipements">
+            <div className="menu__txt" onClick={handleClick}>
+              <ul>
+                {logement.equipments.map((equipment) => (
+                  <li key={equipment}>{equipment}</li>
+                ))}
+              </ul>
+            </div>
+          </Dropdown>
+        </div>
+
       </div>
       <Footer />
     </>
   );
 };
 
-export default Logements;
+export default Logement;

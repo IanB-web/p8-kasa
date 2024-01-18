@@ -2,9 +2,18 @@ import { useState } from "react";
 
 function Dropdown({ title = "titre par default", children }) {
   const [isActive, setIsActive] = useState(false);
+  const [isAnimated, setIsAnimated] = useState(false);
 
   const handleClick = () => {
-    setIsActive(!isActive);
+    if (isActive) {
+      setIsAnimated(true);
+
+      setTimeout(() => {
+        setIsActive(false);
+      }, 300);
+    } else {
+      setIsActive(true);
+    }
   };
 
   return (
