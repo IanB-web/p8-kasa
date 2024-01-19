@@ -6,6 +6,7 @@ import Footer from "../../components/footer/Footer";
 import Error from "../../components/error/Error";
 import Dropdown from "../../components/dropdown/Dropdown";
 import Rating from "../../components/rating/Rating";
+import Carrousel from "../../components/carrousel/Carrousel";
 
 const Logement = () => {
   const { id } = useParams();
@@ -56,13 +57,16 @@ const Logement = () => {
     <>
       <Header />
       <div className="logement">
+        
+      <Carrousel images={logement.pictures} />
+        
         <div className="logement__info">
           <div className="logement__intro">
             <h1 className="logement__title">{logement.title} </h1>
             <span className="logement__location">{logement.location}</span>
             <div className="tags">
               {logement.tags.map((tag) => (
-                <p className="tag">{tag}</p>
+                <p className="tag" key={tag}>{tag}</p>
               ))}
             </div>
           </div>
