@@ -1,8 +1,11 @@
 .logement {
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    margin: 50px auto;
+    padding: 0 50px;
     gap: 20px;
+    max-width: 1240px;
+    transition: 0.3s;
 
     &__info {
         display: flex;
@@ -103,6 +106,9 @@
 }
 
 @media screen and (max-width: 640px) {
+    .logement{
+        padding: 0 10px;
+    }
     .logement__info {
         gap: 20px;
         .logement__intro {
