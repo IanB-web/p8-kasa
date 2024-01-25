@@ -17,7 +17,7 @@ const About = () => {
       <Header />
 
       <main>
-        <div className="content">
+        <div className="content about__content">
 
           <Banner src="./aboutBanner.png" />
 

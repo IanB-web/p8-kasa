@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     margin: 50px;
-    gap:20px;
+    gap: 20px;
 
     &__info {
         display: flex;
@@ -12,7 +12,6 @@
         flex-wrap: wrap;
     }
 }
-
 
 .logement__intro {
     display: flex;
@@ -26,6 +25,7 @@
     h1 {
         margin: 0;
         font-size: 32px;
+        transition: 0.3s;
     }
     span {
         font-size: 17px;
@@ -75,7 +75,7 @@
         padding: 5px 20px;
         border-radius: 10px;
         font-size: 12px;
-        margin:6px;
+        margin: 6px;
     }
 }
 
@@ -84,6 +84,7 @@
     justify-content: space-between;
     margin: auto;
     width: 100%;
+    flex-wrap: wrap;
     .menu__box {
         width: 45%;
     }
@@ -96,7 +97,61 @@
     }
 }
 
-.rating{
+.rating {
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 640px) {
+    .logement__info {
+        gap: 20px;
+        .logement__intro {
+            gap: 5px;
+            h1 {
+                font-size: 28px;
+            }
+            span{
+                color: $color-black;
+            }
+        }
+    }
+    .logement__dropdown {
+        flex-direction: column;
+        gap: 20px;
+
+        .menu {
+            &__box {
+                width: 100%;
+            }
+            &__title {
+                h2 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .host {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &__name {
+            font-size: 16px;
+            width: 100px;
+        }
+    }
+}
+@media screen and (max-width: 413px) {
+    .host {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        &__name {
+            font-size: 16px;
+            width: 100px;
+        }
+    }
 }
