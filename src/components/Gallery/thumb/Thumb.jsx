@@ -1,7 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
-import axios from "axios";
 import routes from "../../../router/routes";
 
 const Thumb = ({ logement }) => {

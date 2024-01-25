@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Thumb from "./thumb/thumb";
-import axios from "axios";
 
 const Gallery = () => {
 
@@ -8,9 +7,9 @@ const Gallery = () => {
   const [galleryData, setGalleryData] = useState([]);
 
   const getData = () => {
-    axios
-      .get("/logements.json")
-      .then((res) => setGalleryData(res.data));
+    fetch("/logements.json")
+      .then((res) => {return res.json()})
+      .then((logements) => setGalleryData(logements))
   };
 
   useEffect(() => getData(), []);
