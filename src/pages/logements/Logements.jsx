@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/footer";
 import Error from "../../components/error/Error";
 import Dropdown from "../../components/dropdown/Dropdown";
 import Rating from "../../components/rating/Rating";

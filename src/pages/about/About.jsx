@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/footer/Footer";
+import Footer from "../../components/footer";
 import Dropdown from "../../components/dropdown/Dropdown";
 import Banner from "../../components/banner/Banner";
 import "./about.scss";
