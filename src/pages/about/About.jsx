@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/footer/Footer";
 import Dropdown from "../../components/dropdown/Dropdown";
 import Banner from "../../components/banner/Banner";
+import "./about.scss";
 
 const About = () => {
   const [isActive, setIsActive] = useState(false);

@@ -7,6 +7,7 @@ import Error from "../../components/error/Error";
 import Dropdown from "../../components/dropdown/Dropdown";
 import Rating from "../../components/rating/Rating";
 import Carrousel from "../../components/carrousel/Carrousel";
+import "./logement.scss";
 
 const Logement = () => {
   const { id } = useParams();

@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import routes from "../../../router/routes";
+import "./thumb.scss";
+
 
 const Thumb = ({ logement }) => {
   return (

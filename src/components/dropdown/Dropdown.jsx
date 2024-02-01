@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./dropdown.scss";
 
 function Dropdown({ title = "titre par default", children }) {
   const [isActive, setIsActive] = useState(false);

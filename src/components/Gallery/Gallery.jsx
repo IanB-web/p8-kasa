@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Thumb from "./thumb/thumb";
+import Thumb from "./thumb/Thumb";
+import "./gallery.scss";
+
 
 const Gallery = () => {
-
 
   const [galleryData, setGalleryData] = useState([]);
 

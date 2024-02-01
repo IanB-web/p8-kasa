@@ -1,6 +1,7 @@
 import React from "react";
 import activeStar from "../../assets/img/activeStar.svg";
 import inactiveStar from "../../assets/img/inactiveStar.svg";
+import "./rating.scss";
 
 const Rating = ({ rating }) => {
   const stars = []; // Creer un tableau pour stocker les étoiles
