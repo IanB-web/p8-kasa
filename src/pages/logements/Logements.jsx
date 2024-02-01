@@ -24,6 +24,7 @@ const Logement = () => {
   };
 
   useEffect(() => {
+    
     fetch("/logements.json")
       .then((response) => {
         return response.json(); // Retourner le contenu de la réponse
