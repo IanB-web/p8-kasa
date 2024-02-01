@@ -1,6 +1,6 @@
 @import "./styles/vendor/normalize";
 
-@import "./_settings.scss";
+@import "./settings.scss";
 
 @import "./styles/utils/keyframes";
 @import "./styles/utils/mixins";
@@ -25,4 +25,4 @@
 @import "./components/rating/rating";
 @import "./components/carrousel/carrousel";
 
-@import "./pages/about/_about"
+@import "./pages/about/about"
