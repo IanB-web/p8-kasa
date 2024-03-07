@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/footer";
 import Banner from "../../components/banner/Banner";
-import Gallery from "../../components/Gallery/Gallery";
+import Gallery from "../../components/gallery/Gallery";
 
 const Home = () => {
   return (
