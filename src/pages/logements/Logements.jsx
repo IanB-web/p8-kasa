@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
-import Header from "../../components/header/Header";
+import Header from "../../components/header";
 import Footer from "../../components/footer";
-import Error from "../../components/error/Error";
-import Dropdown from "../../components/dropdown/Dropdown";
-import Rating from "../../components/rating/Rating";
-import Carrousel from "../../components/carrousel/Carrousel";
+import Error from "../../components/error";
+import Dropdown from "../../components/dropdown";
+import Rating from "../../components/rating";
+import Carrousel from "../../components/carrousel";
 import "./logement.scss";
 
 const Logement = () => {
@@ -24,7 +24,6 @@ const Logement = () => {
   };
 
   useEffect(() => {
-    
     fetch("/logements.json")
       .then((response) => {
         return response.json(); // Retourner le contenu de la réponse
@@ -59,16 +58,17 @@ const Logement = () => {
     <>
       <Header />
       <div className="logement">
-        
-      <Carrousel images={logement.pictures} />
-        
+        <Carrousel images={logement.pictures} />
+
         <div className="logement__info">
           <div className="logement__intro">
             <h1 className="logement__title">{logement.title} </h1>
             <span className="logement__location">{logement.location}</span>
             <div className="tags">
               {logement.tags.map((tag) => (
-                <p className="tag" key={tag}>{tag}</p>
+                <p className="tag" key={tag}>
+                  {tag}
+                </p>
               ))}
             </div>
           </div>

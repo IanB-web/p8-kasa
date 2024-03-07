@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Thumb from "./thumb/Thumb";
+import Thumb from "./thumb";
 import "./gallery.scss";
 
 

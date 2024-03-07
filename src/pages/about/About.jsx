@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/index";
-import Dropdown from "../../components/dropdown/Dropdown";
-import Banner from "../../components/banner/Banner";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
+import Dropdown from "../../components/dropdown";
+import Banner from "../../components/banner";
 import "./about.scss";
 
 const About = () => {
@@ -19,45 +19,32 @@ const About = () => {
 
       <main>
         <div className="content about__content">
-
           <Banner src="./aboutBanner.png" />
 
           <div className="menu">
             <Dropdown title="Fiabilité">
-              <p
-                className="menu__txt"
-                onClick={handleClick}
-              >
+              <p className="menu__txt" onClick={handleClick}>
                 Les annonces postées sur Kasa garantissent une fiabilité totale.
                 Les photos sont conformes aux logements, et toutes les
                 informations sont régulièrement vérifiées par nos équipes.
               </p>
             </Dropdown>
             <Dropdown title="Respect">
-              <p
-                className="menu__txt"
-                onClick={handleClick}
-              >
+              <p className="menu__txt" onClick={handleClick}>
                 La bienveillance fait partie des valeurs fondatrices de Kasa.
                 Tout comportement discriminatoire ou de perturbation du
                 voisinage entraînera une exclusion de notre plateforme.
               </p>
             </Dropdown>
             <Dropdown title="Service">
-              <p
-                className="menu__txt"
-                onClick={handleClick}
-              >
+              <p className="menu__txt" onClick={handleClick}>
                 La bienveillance fait partie des valeurs fondatrices de Kasa.
                 Tout comportement discriminatoire ou de perturbation du
                 voisinage entraînera une exclusion de notre plateforme.
               </p>
             </Dropdown>
             <Dropdown title="Sécurité">
-              <p
-                className="menu__txt"
-                onClick={handleClick}
-              >
+              <p className="menu__txt" onClick={handleClick}>
                 La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes
                 que pour les voyageurs, chaque logement correspond aux critères
                 de sécurité établis par nos services. En laissant une note aussi
@@ -67,7 +54,6 @@ const About = () => {
                 hôtes.
               </p>
             </Dropdown>
-            
           </div>
         </div>
       </main>
