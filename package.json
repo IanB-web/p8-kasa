@@ -1,7 +1,7 @@
 {
   "name": "p8-kasa",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --host",
@@ -14,6 +14,7 @@
     "axios": "^1.6.4",
     "g": "^2.0.1",
     "json-server": "^0.17.4",
+    "node": "^21.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1",
