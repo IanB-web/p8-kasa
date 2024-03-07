@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/footer";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/index";
 import Banner from "../../components/banner/Banner";
 import Gallery from "../../components/gallery/Gallery";
 
