@@ -6,7 +6,7 @@ import routes from "./routes";
 import Home from "../pages/home/Home";
 import About from "../pages/about/About";
 import Logements from "../pages/logements/Logements";
-import ErrorPage from "../pages/error/404";
+import ErrorPage from "../pages/error/Error";
 
 function Router() {
   return (
