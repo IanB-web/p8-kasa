@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
-import Dropdown from "../../components/dropdown";
-import Banner from "../../components/banner";
+import Header from "/src/components/header";
+import Footer from "/src/components/footer";
+import Dropdown from "/src/components/dropdown";
+import Banner from "/src/components/banner";
 import "./about.scss";
 
 const About = () => {

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 import { useParams } from "react-router-dom";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
-import Error from "../../components/error";
-import Dropdown from "../../components/dropdown";
-import Rating from "../../components/rating";
-import Carrousel from "../../components/carrousel";
+import Header from "/src/components/header";
+import Footer from "/src/components/footer";
+import Error from "/src/components/error";
+import Dropdown from "/src/components/dropdown";
+import Rating from "/src/components/rating";
+import Carrousel from "/src/components/carrousel";
 import "./logement.scss";
 
 const Logement = () => {
